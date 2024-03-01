@@ -13,6 +13,8 @@ public class PrintFieldDescendingTypeCommand implements Command {
         if (tokens.length > 1){
             System.out.println("The 'print_field_descending_type' command requires no arguments. Try again.");
         }
-        else cm.printFieldDescendingType();
+        else {
+            cm.printFieldDescendingType();
+        }
     }
 }

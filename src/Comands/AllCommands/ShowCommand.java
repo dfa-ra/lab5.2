@@ -14,6 +14,8 @@ public class ShowCommand implements Command {
         if (tokens.length > 1){
             System.out.println("The 'show' command requires no arguments. Try again.");
         }
-        else cm.show();
+        else {
+            cm.show();
+        }
     }
 }

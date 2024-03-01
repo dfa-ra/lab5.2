@@ -16,6 +16,9 @@ public class GroupCountingByTypeCommand implements Command {
         if (tokens.length > 1){
             System.out.println("The 'group_counting_by_type' command requires no arguments. Try again.");
         }
-        else cm.groupCountingByType();
+        else {
+            cm.groupCountingByType();
+            System.out.println("Complete!");
+        }
     }
 }

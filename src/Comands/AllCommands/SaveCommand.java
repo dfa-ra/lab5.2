@@ -14,6 +14,9 @@ public class SaveCommand implements Command {
         if (tokens.length > 1){
             System.out.println("The 'save' command requires no arguments. Try again.");
         }
-        else cm.saveCollection();
+        else {
+            cm.saveCollection();
+            System.out.println("Complete!");
+        }
     }
 }

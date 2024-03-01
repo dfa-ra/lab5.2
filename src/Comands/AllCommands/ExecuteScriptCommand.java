@@ -33,6 +33,8 @@ public class ExecuteScriptCommand implements Command {
                 }
 
                 reader.close();
+                System.out.println("Complete!");
+
             } catch (IOException e) {
                 System.out.println("This file does not exist, try again!");
             } catch (Exception e) {

@@ -28,11 +28,15 @@ public class XmlManager {
      * @throws Exception
      */
     public static HashSet<Ticket> myParser() throws Exception {
-        //File f = new File(System.getenv("PWD") + "/base.xml");
-        File f = new File(System.getenv("RBASE") + "/base.xml");
+        File f = new File(System.getenv("PWD") + "/base.xml");
+        //File f = new File(System.getenv("RBASE") + "/base.xml");
         HashSet<Ticket> notebook = new HashSet<>();
         if(!f.exists() || f.isDirectory()) {
             System.out.println("File not exists or it is directory! We create new file on this way.");
+            return notebook;
+        }
+        if(!f.canRead() || !f.canWrite()){
+            System.out.println("Loading error! The file is not readable or writable. Collection is empty.");
             return notebook;
         }
         if (f.length() == 0) return notebook;
@@ -173,8 +177,8 @@ public class XmlManager {
      */
     public static void saveCollection(HashSet<Ticket> notebook) throws Exception{
 
-        //BufferedOutputStream bfile = new BufferedOutputStream(new FileOutputStream(System.getenv("PWD") + "/base.xml"));
-        BufferedOutputStream bfile = new BufferedOutputStream(new FileOutputStream(System.getenv("RBASE") + "/base.xml"));
+        BufferedOutputStream bfile = new BufferedOutputStream(new FileOutputStream(System.getenv("PWD") + "/base.xml"));
+        //BufferedOutputStream bfile = new BufferedOutputStream(new FileOutputStream(System.getenv("RBASE") + "/base.xml"));
         StringBuilder xmlText = new StringBuilder();
         Iterator<Ticket> i = notebook.iterator();
         xmlText.append("<notebook>");

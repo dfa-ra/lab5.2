@@ -14,6 +14,9 @@ public class ClearCommand implements Command {
         if (tokens.length > 1){
             System.out.println("The 'clear' command requires no arguments. Try again.");
         }
-        else cm.clear();
+        else {
+            cm.clear();
+            System.out.println("Complete!");
+        }
     }
 }

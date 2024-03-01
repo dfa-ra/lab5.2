@@ -14,6 +14,9 @@ public class AddCommand implements Command {
         if (tokens.length > 1){
             System.out.println("Enter 'add' and then an input form will appear.");
         }
-        else cm.add();
+        else {
+            cm.add();
+            System.out.println("Complete!");
+        }
     }
 }

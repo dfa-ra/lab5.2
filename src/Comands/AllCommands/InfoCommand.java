@@ -14,6 +14,8 @@ public class InfoCommand implements Command {
         if (tokens.length > 1){
             System.out.println("The 'info' command requires no arguments. Try again.");
         }
-        else cm.info();
+        else {
+            cm.info();
+        }
     }
 }

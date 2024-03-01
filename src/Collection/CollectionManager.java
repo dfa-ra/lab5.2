@@ -89,7 +89,6 @@ public class CollectionManager {
         String answ = in.next();
         if (answ.equals("y")) ticket.setPerson(new Person(Invoker.addBirthDay(), Invoker.addHaitColor(), Invoker.addLocation()));
         notebook.add(ticket);
-        System.out.println("end");
     }
 
     /**

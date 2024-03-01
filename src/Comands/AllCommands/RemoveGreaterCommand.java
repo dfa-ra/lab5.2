@@ -16,7 +16,10 @@ public class RemoveGreaterCommand implements Command {
         }else if(tokens.length == 1) System.out.println("This command requires an argument. Try again!");
         else {
             try{
-                if (Long.parseLong(tokens[1]) > 0) cm.removeGreater(Long.parseLong(tokens[1]));
+                if (Long.parseLong(tokens[1]) > 0) {
+                    cm.removeGreater(Long.parseLong(tokens[1]));
+                    System.out.println("Complete!");
+                }
                 else System.out.println("Error! id > 0");
             }catch (NumberFormatException nfe) {
                 System.out.println("Argument type error. Try again!");
